@@ -17,7 +17,7 @@ describe('server', () => {
     })
     describe('POST /register', () => {
         it('should return 200 OK', () => {
-            return request(server).post('/api/auth/register').send({username:"a",password:"a"})
+            return request(server).post('/api/auth/register').send({username:"aaa",password:"aaa"})
             .then(res => {
                 expect(res.status).toBe(200);
             })
