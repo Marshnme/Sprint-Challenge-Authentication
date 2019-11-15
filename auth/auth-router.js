@@ -10,8 +10,8 @@ router.post('/register', (req, res) => {
   user.password = hash;
 
   db('users').insert(user)
-  .then(newUser => {
-    res.status(200).json(newUser) 
+  .then(id => {
+    res.status(200).json(id) 
   })
   .catch(err => {
     res.status(500).json({message:"Couldnt register user"})
